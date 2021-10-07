@@ -1,0 +1,15 @@
+@charset "UTF-8";
+
+@import '../../node_modules/reset-css-complete/reset';
+
+body {
+  background: #ccc;
+  text-align: center;
+}
+
+.container {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}

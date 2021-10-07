@@ -1,0 +1,31 @@
+{
+  "name": "wordpress-theme-kit",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev:sass": "sass ./src/styles/:./dist/assets/ --no-source-map --watch",
+    "dev:templates": "cpx ./src/templates/**/* dist --watch",
+    "dev:images": "cpx ./src/images/**/* dist/assets --watch",
+    "dev:scripts": "esbuild ./src/scripts/main.js --bundle --outfile=./dist/assets/main.js --minify --watch",
+    "dev": "run-p dev:*",
+    "build:sass": "sass ./src/styles/:./dist/assets/ --no-source-map",
+    "build:templates": "cpx ./src/templates/**/* dist",
+    "build:images": "cpx ./src/images/**/* dist/assets",
+    "build:scripts": "esbuild ./src/scripts/main.js --bundle --outfile=./dist/assets/main.js --minify",
+    "build": "rm -rf ./dist && run-p build:*",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "private": true,
+  "license": "ISC",
+  "devDependencies": {
+    "cpx": "^1.5.0",
+    "esbuild": "^0.13.4",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.42.1"
+  },
+  "dependencies": {
+    "reset-css-complete": "^2.0.0"
+  }
+}

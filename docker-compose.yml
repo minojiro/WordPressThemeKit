@@ -1,0 +1,28 @@
+version: '3.1'
+
+services:
+
+  wordpress:
+    image: wordpress
+    ports:
+      - 8080:80
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: user
+      WORDPRESS_DB_PASSWORD: pass
+      WORDPRESS_DB_NAME: wpdb
+    volumes:
+      - ./dist:/var/www/html/wp-content/themes/default
+      - ./plugins:/var/www/html/wp-content/plugins
+
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_DATABASE: wpdb
+      MYSQL_USER: user
+      MYSQL_PASSWORD: pass
+      MYSQL_ROOT_PASSWORD: pass
+    volumes:
+      - ./docker-entrypoint-initdb.d:/docker-entrypoint-initdb.d
+    # volumes:
+    #   - db:/var/lib/mysql
