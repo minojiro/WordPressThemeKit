@@ -1,0 +1,9 @@
+[submodule "plugins/akismet"]
+	path = plugins/akismet
+	url = git@github.com:wp-plugins/akismet.git
+[submodule "plugins/custom-post-type-ui"]
+	path = plugins/custom-post-type-ui
+	url = git@github.com:WebDevStudios/custom-post-type-ui.git
+[submodule "plugins/acf"]
+	path = plugins/acf
+	url = git@github.com:AdvancedCustomFields/acf.git

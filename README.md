@@ -1,6 +1,7 @@
 # WordPress Theme Kit
 
 ```bash
+git submodule init
 docker-compose up -d
 npm install -g pnpm
 pnpm install
