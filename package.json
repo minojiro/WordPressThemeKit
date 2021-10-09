@@ -8,6 +8,7 @@
     "dev:templates": "cpx ./src/templates/**/* dist --watch",
     "dev:images": "cpx ./src/images/**/* dist/assets --watch",
     "dev:scripts": "esbuild ./src/scripts/main.js --bundle --outfile=./dist/assets/main.js --minify --watch",
+    "dev:dockerComposeUp": "docker-compose up -d",
     "dev": "run-p dev:*",
     "build:sass": "sass ./src/styles/:./dist/assets/ --no-source-map",
     "build:templates": "cpx ./src/templates/**/* dist",
